@@ -1,19 +1,40 @@
 def main():
-
     groceries = {}
 
     while True:
         try:
-            item = input()
+            item = input().upper()
         except EOFError:
             break
 
         if item in groceries:
-            groceries[item] =+ 1
+            groceries[item] += 1
         else:
             groceries[item] = 1
 
-    for item in groceries:
-        print(groceries[item])
+    for item in sorted(groceries):
+        print(groceries[item], (item))
+
 
 main()
+
+
+# def main():
+#     groceries = {}
+
+#     while True:
+#         try:
+#             item = input().upper()
+#         except EOFError:
+#             break
+
+#         if item in groceries:
+#             groceries[item] += 1
+#         else:
+#             groceries[item] = 1
+
+#     for item in sorted(groceries):
+#         print(groceries[item], item)
+
+
+# main()
