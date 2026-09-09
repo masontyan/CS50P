@@ -1,13 +1,4 @@
-# prompt user for date in month day year order
-
-# then output the saem date in yyyy mm dd format
-
-# if users input is not a valid date in either format, primpt the user again
-
-# assume all months has <31 days
-
 def main():
-
     while True:
         try:
             date = input("Date: ")
@@ -60,3 +51,50 @@ def main():
         break
 
 main()
+
+
+# def main():
+#     months = [
+#         "January",
+#         "February",
+#         "March",
+#         "April",
+#         "May",
+#         "June",
+#         "July",
+#         "August",
+#         "September",
+#         "October",
+#         "November",
+#         "December"
+#     ]
+
+#     while True:
+#         try:
+#             date = input("Date: ")
+
+#             if "/" in date:
+#                 month, day, year = date.split("/")
+#                 month = int(month)
+#                 day = int(day)
+#                 year = int(year)
+
+#             elif "," in date:
+#                 month, day, year = date.split()
+#                 month = months.index(month) + 1
+#                 day = int(day.strip(","))
+#                 year = int(year)
+
+#             else:
+#                 continue
+
+#             if 1 <= month <= 12 and 1 <= day <= 31:
+#                 break
+
+#         except (ValueError, IndexError):
+#             continue
+
+#     print(f"{year:04}-{month:02}-{day:02}")
+
+
+# main()
